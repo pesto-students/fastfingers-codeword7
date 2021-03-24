@@ -20,19 +20,13 @@ const StartComponent = ({ createClickHandler }) => {
       inputEl.current.focus();
       return;
     }
-    // createClickHandler("/start");
     window.sessionStorage.clear();
     window.sessionStorage.setItem("name", name);
     window.sessionStorage.setItem("difficultyLevel", level);
-    console.log('wjbwbeb')
     e();
   };
   return (
     <div>
-      {/* StartComponent
-      <a href='/start' onClick={createClickHandler("/start")}>
-        start game
-      </a> */}
       <div className="MainPage">
         <div>
           <Keyboard className="keyboard" />
@@ -56,11 +50,11 @@ const StartComponent = ({ createClickHandler }) => {
           />
           {
             !name ? (
-              <label id="validName" className="align-left w-33 hidden">
+              <label id="validName" className="align-left w-33">
                 *Name is required!
               </label>
             ) : (
-              <div></div>
+              <></>
             )
           }
           <select
