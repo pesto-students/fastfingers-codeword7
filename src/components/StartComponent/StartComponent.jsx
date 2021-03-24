@@ -4,7 +4,7 @@ import "./StartComponent.css";
 
 const StartComponent = ({ createClickHandler }) => {
   const [name, setName] = useState('')
-  const [level, setLevel] = useState('easy')
+  const [level, setLevel] = useState('EASY')
   const inputEl = useRef('');
 
   const handleNameChange = (e) => {
@@ -62,11 +62,11 @@ const StartComponent = ({ createClickHandler }) => {
             id="difficulty"
             onChange={handleDifficultyLevelChange}
           >
-            <option value="easy" defaultValue>
+            <option value="EASY" defaultValue>
               EASY
             </option>
-            <option value="medium">MEDIUM</option>
-            <option value="hard">HARD</option>
+            <option value="MEDIUM">MEDIUM</option>
+            <option value="HARD">HARD</option>
           </select>
           <div
             className="startgame pointer"

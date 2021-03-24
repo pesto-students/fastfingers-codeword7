@@ -14,7 +14,7 @@ export default function DisplayCurrentScore({ handlePlayAgainClick }) {
   return (
     <div className="final-score-container">
       <div className="final-score-info">
-        <h2 className="score-game-font">SCORE: GAME {allGameResults.length}</h2>
+        <h2 className="score-game-font">SCORE: GAME {allGameResults.length + 1}</h2>
         <h1 className="score-time-font">{document.getElementById("spnTotalScore").innerHTML}</h1>
         <h1 className={isHighScore ? "visible" : "hidden"}>New High Score</h1>
       </div>

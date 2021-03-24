@@ -14,7 +14,7 @@ export default function ScoreBoard() {
         Personal Best
       </span>
       <div>
-        <h4 className="game-score">Game {i}: {convertTimeToMMSS(time)}</h4>
+        <h4 className="game-score">Game {i + 1}: {convertTimeToMMSS(time)}</h4>
       </div>
     </div>
   ));

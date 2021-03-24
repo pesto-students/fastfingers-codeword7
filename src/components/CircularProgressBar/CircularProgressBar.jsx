@@ -18,13 +18,7 @@ export default function CircularProgressBar({ progress }) {
     const progressOffset = (progress / 100) * circumference;
     setOffset(progressOffset);
     circleRef.current.style = "transition: stroke-dashoffset ease-in-out";
-    if (progress >= 50 && progress < 75) {
-      setColor("#ffff00");
-    } else if (progress >= 75) {
-      setColor("#ff0000");
-    } else {
-      setColor("#228B22");
-    }
+    setColor("#ff0000");
   }, [progress, offset, circumference]);
 
   return (
