@@ -15,7 +15,6 @@ const GameComponent = ({ createClickHandler }) => {
   };
   const handleQuitGame = (e) => {
     window.sessionStorage.clear();
-    // window.location.reload();
     e();
   };
   const handlePlayAgainClick = () => {

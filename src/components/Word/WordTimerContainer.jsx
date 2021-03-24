@@ -20,7 +20,7 @@ export default function WordTimerContainer({
   const [errorMessage] = useState("");
 
   const initialDifficultyFactor = levelMap.get(
-    window.sessionStorage.getItem("level")
+    window.sessionStorage.getItem("difficultyLevel")
   );
   const [difficultyFactor, setDifficultyFactor] = useState(
     initialDifficultyFactor
@@ -43,10 +43,10 @@ export default function WordTimerContainer({
     setTime(wordTime > 2 ? wordTime : 2);
     setDifficultyFactor(difficultyFactor + 0.01);
     if (difficultyFactor >= 1.5 && difficultyFactor < 1.51) {
-      window.sessionStorage.setItem("level", "MEDIUM");
+      window.sessionStorage.setItem("difficultyLevel", "MEDIUM");
       changeGameLevel();
     } else if (difficultyFactor >= 2 && difficultyFactor < 2.01) {
-      window.sessionStorage.setItem("level", "HARD");
+      window.sessionStorage.setItem("difficultyLevel", "HARD");
       changeGameLevel();
     }
   };

@@ -41,6 +41,7 @@ export default function WordPlay({ word, getWord }) {
         className="align-center"
         onChange={handleWordInput}
         autoComplete="off"
+        autoFocus
       />
     </div>
   );
