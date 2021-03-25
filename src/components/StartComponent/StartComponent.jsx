@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import PropTypes from "prop-types";
 import { ReactComponent as Keyboard } from "./../../images/icon-keyboard.svg";
 import "./StartComponent.css";
 
@@ -80,5 +81,7 @@ const StartComponent = ({ createClickHandler }) => {
     </div>
   )
 }
-
+StartComponent.propTypes = {
+  createClickHandler: PropTypes.func,
+};
 export default StartComponent

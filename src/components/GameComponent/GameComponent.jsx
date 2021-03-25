@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from "prop-types";
 import UserInfo from "./../UserInfo/UserInfo";
 import Score from "./../CurrentScore/Score";
 import ScoreBoard from "./../ScoreBoard/ScoreBoard";
@@ -57,5 +58,7 @@ const GameComponent = ({ createClickHandler }) => {
     </div>
   )
 }
-
+GameComponent.propTypes = {
+  createClickHandler: PropTypes.func,
+};
 export default GameComponent
