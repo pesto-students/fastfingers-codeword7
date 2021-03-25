@@ -24,7 +24,7 @@ export default function Timer({ time, handleGameOver }) {
       }
       return;
     }
-    const intervalId = setInterval(timer, 6);
+    const intervalId = setInterval(timer, 5);
     return () => clearInterval(intervalId);
   });
 
